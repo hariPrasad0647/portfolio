@@ -6,7 +6,7 @@ export const siteMetadata = {
   language: "en-us",
   theme: "light",
   siteName: "amitchauhan.me",
-  siteUrl: "https://amitchauhan.me",
+  siteUrl: "https://hari-prasad.vercel.app",
 
   siteLogo: "/favicon.ico",
   image: "/static/homepage.png",
