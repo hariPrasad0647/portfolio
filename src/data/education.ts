@@ -2,36 +2,25 @@ import { type ExperienceShowcaseListItemProps } from "@/components/experience/ex
 
 export const EDUCATION: ExperienceShowcaseListItemProps[] = [
   {
-    title: "Bachelor Of Engineering in Electronics and Telecommunication",
+    title: "Full Stack Web Development Program",
     organisation: {
-      name: "Rizvi College Of Engineering",
-      href: "https://eng.rizvi.edu.in/",
+      name: "NxtWave Disruptive Technologies (CCBP)",
+      href: "https://www.ccbp.in/",
     },
-    date: "2019-2023",
-    location: "Bandra, Mumbai",
+    date: "2023 – 2025",
+    location: "Hyderabad, India",
     description:
-      "Relevant courses included Data Structures and Algorithms, Web Design, Cloud Computing, Artificial Neural Network and Database Management.",
+      "Completed an intensive 1.5-year full stack program focused on building production-ready web applications. Gained hands-on experience with React, Next.js, JavaScript, TypeScript, Node.js, REST APIs, databases, authentication, payment integrations, dashboard analytics, and role-based access control.",
   },
   {
-    title: "Higher Secondary School",
+    title: "Bachelor of Technology – Civil Engineering",
     organisation: {
-      name: "Mithibai College",
-      href: "https://www.mithibai.ac.in/",
+      name: "Balaji Institute of Technology and Science",
+      href: "https://bitswgl.ac.in/",
     },
-    date: "2016-2018",
-    location: "Vile Parle, Mumbai",
+    date: "2018 – 2022",
+    location: "Telengana, India",
     description:
-      "Completed the course in Electronics Bifocal Science with 68%. Started freelancing making 3D assets for games. Got interested in game development and learned unity and c#",
-  },
-  {
-    title: "Secondary School Education",
-    organisation: {
-      name: "Holy Family High School",
-      href: "https://holyfamilyandheri.org/",
-    },
-    date: "2017-2018",
-    location: "Andheri, Mumbai",
-    description:
-      "Learned good values,dedication and disciplne. Played district football for 5 years.",
+      "Graduated with a strong foundation in problem-solving and analytical thinking. Transitioned into software development through structured learning and practical project-based experience.",
   },
 ];

@@ -9,10 +9,18 @@ export const sendMail = async function (
   const user = process.env.NODEMAILER_USER;
   const pass = process.env.NODEMAILER_PASS;
 
-  if (!user && !pass) {
-    return new Promise((resolve) =>
-      resolve({ status: 500, message: "Internal server error" }),
-    );
+  console.log("[MAIL] Environment check:", {
+    hasUser: !!user,
+    hasPass: !!pass,
+  });
+
+  // ❗ FIXED BUG: this should be OR, not AND
+  if (!user || !pass) {
+    console.error("[MAIL] Missing env variables");
+    return Promise.resolve({
+      status: 500,
+      message: "Mail service not configured",
+    });
   }
 
   const transporter = createTransport({
@@ -23,19 +31,44 @@ export const sendMail = async function (
     },
   });
 
+  console.log("[MAIL] Transporter created");
+
   const mailOptions = {
-    from: process.env.NODEMAILER_USER,
-    to: process.env.NODEMAILER_USER,
+    from: user,
+    to: user,
     subject: "Portfolio: [" + subject + " ]",
     text: `${name}: <${email}>\n${message}`,
   };
 
+  console.log("[MAIL] Mail options prepared:", {
+    from: mailOptions.from,
+    to: mailOptions.to,
+    subject: mailOptions.subject,
+  });
+
   return new Promise((resolve) => {
-    transporter.sendMail(mailOptions, (error) => {
+    transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
-        resolve({ status: 500, message: "Failed to send mail" });
+        console.error("[MAIL] Send failed:", {
+          message: error.message,
+          code: (error as any)?.code,
+          response: (error as any)?.response,
+        });
+
+        resolve({
+          status: 500,
+          message: "Failed to send mail",
+        });
       } else {
-        resolve({ status: 200, message: "Mail send successfully" });
+        console.log("[MAIL] Mail sent successfully:", {
+          messageId: info?.messageId,
+          response: info?.response,
+        });
+
+        resolve({
+          status: 200,
+          message: "Mail send successfully",
+        });
       }
     });
   });
