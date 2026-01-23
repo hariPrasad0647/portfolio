@@ -13,8 +13,6 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
       DARK: "/images/projects/devi.webp",
     },
   },
-
-
 ];
 
 export const PROJECTS_CARD: ProjectCardProps[] = [
