@@ -49,24 +49,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     sourceCodeHref: "https://github.com/hariPrasad0647/devipickles",
     liveWebsiteHref: "https://www.devipickles.com",
   },
-  {
-    name: "Kushal Yoga",
-    favicon: "/images/projects/logos/k1.ico",
-    imageUrl: ["/images/projects/k1.png", "/images/projects/k2.png"],
-    description:
-      "A full-stack webinar booking platform for online yoga masterclasses, featuring user registrations, secure payment integration, and automated confirmation workflows to streamline event bookings and payments.",
 
-    liveWebsiteHref: "https://masterclass.kushalyoga.com",
-  },
-  {
-    name: "Tutor Dashboard",
-    favicon: "/images/projects/logos/manygames.ico",
-    imageUrl: ["/images/projects/s2.png", "/images/projects/s1.png"],
-    description:
-      "A coach booking platform that enables users to schedule sessions, complete secure payments, and receive automated booking confirmations, providing a smooth end-to-end appointment experience.",
-
-    liveWebsiteHref: "https://www.sphoorthivedika.com/",
-  },
   {
     name: "My portfolio",
     favicon: "/favicon.ico",
