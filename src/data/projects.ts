@@ -13,26 +13,6 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
       DARK: "/images/projects/devi.webp",
     },
   },
-  {
-    index: 1,
-    title: "Kushal Yoga",
-    href: "/projects",
-    tags: ["Next.js", "Tailwindcss", "Vercel"],
-    image: {
-      LIGHT: "/images/projects/kushal.webp",
-      DARK: "/images/projects/kushal.webp",
-    },
-  },
-  {
-    index: 2,
-    title: "Admin Dashboards",
-    href: "/projects",
-    tags: ["Next.js", "Tailwindcss", "Vercel"],
-    image: {
-      LIGHT: "/images/projects/dash.png",
-      DARK: "/images/projects/dash.png",
-    },
-  },
 ];
 
 export const PROJECTS_CARD: ProjectCardProps[] = [
